@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc --outDir build",
     "dev": "ts-node index.ts",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "eslint:test": "node eslint/custom-rules/enforce-foo-bar.test.js"
   },
   "author": "",
   "license": "MIT",

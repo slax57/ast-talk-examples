@@ -8,3 +8,6 @@ dev:
 
 lint:
 	npm run lint
+
+test-eslint:
+	npm run eslint:test
