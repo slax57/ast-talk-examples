@@ -22,9 +22,17 @@ module.exports = {
             node,
             message:
               "Named import from @mui/icons-material should be avoided for performance reasons. Use a default import instead.",
-            // fix(fixer) {
-            //   return fixer.replaceText(node.init, '"bar"');
-            // },
+            fix(fixer) {
+              return fixer.replaceText(
+                node,
+                node.specifiers
+                  .map(
+                    (specifier) =>
+                      `import ${specifier.local.name} from '@mui/icons-material/${specifier.local.name}';`
+                  )
+                  .join("\n")
+              );
+            },
           });
         }
       },
