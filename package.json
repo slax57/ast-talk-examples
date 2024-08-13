@@ -7,7 +7,7 @@
     "build": "tsc --outDir build",
     "dev": "ts-node index.ts",
     "lint": "eslint .",
-    "eslint:test": "node eslint/custom-rules/enforce-foo-bar.test.js"
+    "eslint:test": "node eslint/custom-rules/enforce-foo-bar.test.js && node eslint/custom-rules/enforce-default-import.test.js && echo 'All tests passed!'"
   },
   "author": "",
   "license": "MIT",
