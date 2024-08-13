@@ -17,7 +17,8 @@ export default [
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
     plugins: { example: eslintPluginExample },
     rules: {
-      "example/enforce-default-import": "error",
+      "example/enforce-foo-bar": "error",
+      "example/enforce-default-import": ["error", "@mui/icons-material"],
     },
   },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
