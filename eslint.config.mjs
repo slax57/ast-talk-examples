@@ -5,6 +5,7 @@ import pluginReact from "eslint-plugin-react";
 import { includeIgnoreFile } from "@eslint/compat";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import myPlugin from "./eslint/my-plugin/index.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,6 +15,10 @@ export default [
   includeIgnoreFile(gitignorePath),
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
+    plugins: { myPlugin },
+    rules: {
+      "myPlugin/enforce-default-import": "error",
+    },
   },
   { languageOptions: { globals: { ...globals.browser, ...globals.node } } },
   pluginJs.configs.recommended,
