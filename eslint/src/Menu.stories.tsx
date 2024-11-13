@@ -23,7 +23,7 @@ import {
 } from "@mui/material";
 
 import {
-  Dashboard,
+  Dashboard as DashboardIcon,
   PieChartOutlined,
   PeopleOutlined,
   Inventory,
@@ -92,7 +92,7 @@ export const Dense = () => {
 export const Custom = () => {
   const CustomMenu = () => (
     <Menu>
-      <Menu.Item to="/" leftIcon={<Dashboard />} primaryText="Dashboard" />
+      <Menu.Item to="/" leftIcon={<DashboardIcon />} primaryText="Dashboard" />
       <Menu.Item
         to="/sales"
         leftIcon={<PieChartOutlined />}
@@ -149,7 +149,7 @@ export const MenuItemChild = () => {
       <Menu>
         <Menu.Item to="/" primaryText="Dashboard">
           <ListItemIcon>
-            <Dashboard />
+            <DashboardIcon />
           </ListItemIcon>
           <ListItemText>Dashboard</ListItemText>
           <Typography variant="body2" color="text.secondary">
