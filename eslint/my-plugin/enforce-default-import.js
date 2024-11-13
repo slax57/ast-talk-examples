@@ -24,7 +24,7 @@ module.exports = {
                 node.specifiers
                   .map(
                     (specifier) =>
-                      `import ${specifier.local.name} from "@mui/icons-material/${specifier.local.name}";`
+                      `import ${specifier.local.name} from "@mui/icons-material/${specifier.imported.name}";`
                   )
                   .join("\n")
               );
