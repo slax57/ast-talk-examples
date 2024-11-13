@@ -38,6 +38,12 @@ ruleTester.run(
         options: ["@mui/icons-material"],
       },
       {
+        code: "import { Dashboard as DashboardIcon } from '@mui/icons-material';",
+        output: "import DashboardIcon from '@mui/icons-material/Dashboard';",
+        errors: 1,
+        options: ["@mui/icons-material"],
+      },
+      {
         code: "import { Dashboard } from '@mui/icons-material';",
         output: "import Dashboard from '@mui/icons-material/Dashboard';",
         errors: 1,

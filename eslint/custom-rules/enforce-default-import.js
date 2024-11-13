@@ -45,7 +45,7 @@ module.exports = {
                   node.specifiers
                     .map(
                       (specifier) =>
-                        `import ${specifier.local.name} from '${source}/${specifier.local.name}';`
+                        `import ${specifier.local.name} from '${source}/${specifier.imported.name}';`
                     )
                     .join("\n")
                 );
